@@ -26,7 +26,7 @@ def divide_values(numerator: (int, float), denominator: (int, float)) -> (int, f
         logging.info(f'Denominator is non null and values are numeric')
         return numerator / denominator
     except AssertionError:
-        return logging.info(f'Check if denominator is non null or values are numeric')
+        return logging.error(f'Check if denominator is non null or values are numeric')
 
 
 def num_words(text: str) -> (int, None):
@@ -40,7 +40,7 @@ def num_words(text: str) -> (int, None):
         logging.info(f'Input is a string')
         return len(text.split())
     except AssertionError:
-        return logging.info(f'Input is not a string')
+        return logging.error(f'Input is not a string')
 
 
 if __name__ == "__main__":
