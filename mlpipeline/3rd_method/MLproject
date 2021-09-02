@@ -1,0 +1,15 @@
+name: download_data
+
+docker_env:
+    image: hello_world_mlflow
+
+entry_points:
+  main:
+    parameters:
+      input:
+        description: input word
+        type: str
+
+    command: >-
+      python download_data.py --input {input}
+
